@@ -1,0 +1,323 @@
+/* Basic Reset */
+body, h1, h2, h3, p, ul, li, form, input, textarea {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* General Styles */
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.header .btn {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* About Section */
+.about {
+    background-color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Skills Section */
+.skills {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    font-size: 1rem;
+    padding: 10px 0;
+}
+
+/* Projects Section */
+.projects {
+    background-color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.projects .project-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.projects .project {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.projects .project h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.projects .project p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.projects .btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact form input, 
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact form .btn {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .about p {
+        width: 90%;
+    }
+
+    .projects .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects .project {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 50px 0;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    .skills ul {
+        padding: 0;
+    }
+
+    .skills li {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+
+    .projects .project {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to the header */
+.header h1, .header p {
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 1.5s ease-in forwards; /* Fade in */
+}
+
+.header h1 {
+    animation-delay: 0.3s; /* Delay to create a staggered effect */
+}
+
+.header p {
+    animation-delay: 0.6s;
+}
+/* Keyframes for slide-up animation */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initially hide sections */
+.about, .skills, .projects, .contact {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Apply animation when visible */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideUp 1s ease-in forwards;
+}
+/* Keyframes for button hover effect */
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* Button hover animation */
+.btn:hover {
+    animation: scaleUp 0.3s ease-in-out forwards;
+}
+/* Keyframes for hover effect on project cards */
+@keyframes projectHover {
+    from {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+    to {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* Hover effect for project cards */
+.project:hover {
+    animation: projectHover 0.3s ease-in-out forwards;
+}
